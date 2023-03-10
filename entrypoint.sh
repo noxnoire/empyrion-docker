@@ -10,14 +10,6 @@
 GAMEDIR="$HOME/Steam/steamapps/common/Empyrion - Dedicated Server/DedicatedServer"
 
 cd "$HOME"
-STEAMCMD="./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous $STEAMCMD +app_update 530870"
-
-# add beta phase (must be set after app_update)
-[ -z "$BETA" ] || STEAMCMD="$STEAMCMD -beta experimental"
-
-# eval to support quotes in $STEAMCMD
-eval "$STEAMCMD +quit"
-
 mkdir -p "$GAMEDIR/Logs"
 
 rm -f /tmp/.X1-lock
